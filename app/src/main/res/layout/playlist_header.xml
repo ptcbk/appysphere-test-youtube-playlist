@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="5dp">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:elevation="5dp"
+        android:id="@+id/playlistHeaderBox">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="playlist title"
+            android:id="@+id/playlistTitleTV"
+            android:layout_centerVertical="true"/>
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/ic_expand_more_black"
+            android:layout_alignParentRight="true"
+            android:id="@+id/showMoreBtn"/>
+    </RelativeLayout>
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/songRecyclerview"
+        android:layout_below="@+id/playlistHeaderBox"
+        android:visibility="gone"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="2px"
+        android:background="#cccccc"
+        android:layout_below="@id/playlistHeaderBox"/>
+</RelativeLayout>
